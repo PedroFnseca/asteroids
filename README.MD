@@ -14,7 +14,7 @@ Welcome to Asteroids, the most exciting and fun space adventure game! Here, you'
   - Game Over: The game ends when you collide with an asteroid. Your final score will be displayed. Try again and beat your high score!
 
 ## Have Fun and Enjoy! 🎮🌌
-Disclaimer: Space Rock Blast is not responsible for any addiction that may occur due to excessive playing. Play responsibly!
+Disclaimer: Asteroids is not responsible for any addiction that may occur due to excessive playing. Play responsibly!
 
 ### [Play the Game](https://pedrofnseca.github.io/asteroids/) 🚀🌑
 
@@ -22,7 +22,7 @@ Disclaimer: Space Rock Blast is not responsible for any addiction that may occur
 
 ## Technical details
 
-Space Rock Blast is built using a combination of pure JavaScript and the [p5.js](https://p5js.org/) library (and Maizena). 
+Asteroids is built using a combination of pure JavaScript and the [p5.js](https://p5js.org/) library (and Maizena). 
 
 [p5.js](https://p5js.org/) is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today's web. I use p5.js for rendering the game graphics, handling collisions (with some math), and creating an overall visually appealing 
 
