@@ -3,6 +3,7 @@ class Colisions {
 
   handleColisions() {
     this.handleColisionBulletAsteroid();
+    this.handleColisionSpaceshipAsteroid();
   }
 
   handleColisionBulletAsteroid() {
@@ -17,6 +18,16 @@ class Colisions {
           score++;
         }
       });
+    });
+  }
+
+  handleColisionSpaceshipAsteroid() {
+    asteroids.forEach(asteroid => {
+      const distance = dist(asteroid.x, asteroid.y, spaceship.x, spaceship.y);
+
+      if (distance < asteroid.size * 7) {
+        gameIsOver = true;
+      }
     });
   }
 }

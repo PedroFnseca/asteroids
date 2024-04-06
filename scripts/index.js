@@ -17,14 +17,11 @@ function setup() {
 }
 
 function draw() {
-  background(20);
-  
   translate(widthScreen / 2, heightScreen / 2);
 
-  fill(255);
-  textSize(32);
-  textFont('Arial');
-  text(`Score: ${score}`, -55, -heightScreen / 2 + 30);
+  if (gameIsOver) return endGame();
+  
+  background(20);
 
   colisions.handleColisions();
   spaceship.draw();
@@ -55,4 +52,36 @@ function draw() {
       isInTimer = false;
     }, timeBetweenRounds);
   }
+
+  fill(255);
+  textSize(32);
+  textFont('Arial');
+  text(`Pontos: ${score}`, -55, -heightScreen / 2 + 30);
+}
+
+function endGame() {
+  fill(255);
+  textSize(32);
+  textFont('Arial');
+  text('Fim de jogo', -60, 0);
+
+  textSize(16);
+  text('Aperete R para reiniciar', -60, 30);
+
+  if (keyIsDown(82)) {
+    restart();
+    gameIsOver = false;
+  }
+}
+
+function restart() {
+  spaceship.x = 0;
+  spaceship.y = 0;
+  spaceship.velocityX = 0;
+  spaceship.velocityY = 0;
+  spaceship.angle = 0;
+  spaceship.bullets = [];
+
+  bullets.length = 0;
+  asteroids.length = 0;
 }
