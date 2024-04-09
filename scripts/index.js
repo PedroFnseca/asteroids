@@ -84,4 +84,6 @@ function restart() {
 
   bullets.length = 0;
   asteroids.length = 0;
+
+  score = 0;
 }
