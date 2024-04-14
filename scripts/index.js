@@ -28,15 +28,15 @@ function draw() {
   spaceship.handleMove();
   spaceship.handleShoot();
 
-  bullets.forEach(bullet => {
-    bullet.draw();
-    bullet.move();
-  });
+  for (let i = 0; i < bullets.length; i++) {
+    bullets[i].draw();
+    bullets[i].move();
+  }
 
-  asteroids.forEach(asteroid => {
-    asteroid.draw();
-    asteroid.move();
-  });
+  for (let i = 0; i < asteroids.length; i++) {
+    asteroids[i].draw();
+    asteroids[i].move();
+  }
 
   if (!asteroids.length && !isInTimer) {
     isInTimer = true;

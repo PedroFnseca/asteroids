@@ -24,14 +24,16 @@ class Asteroid {
 
   draw() {
     push();
+    translate(this.x, this.y);
     fill(200);
     noStroke();
-    ellipse(this.x, this.y, this.size * 10);
+    ellipse(0, 0, this.size * 10);
 
-    fill(150)
-    this.spots.forEach(spot => {
-      ellipse(this.x + spot.x,this.y + spot.y, spot.size);
-    });
+    fill(150);
+    for (let i = 0; i < this.spots.length; i++) {
+      let spot = this.spots[i];
+      ellipse(spot.x, spot.y, spot.size);
+    }
 
     pop();
   }
